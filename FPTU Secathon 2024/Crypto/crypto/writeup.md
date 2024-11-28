@@ -22,8 +22,8 @@ Tiếp cận với đề bài là một đoạn IPv4 và đoạn code mã hóa _
 
 Qua phân tích các hàm của encrypt.py ta có thể craft code để decrypt như sau:
 - __Chuyển đổi IPv4 sang dữ liệu d__: Sử dụng __socket.inet_aton__ để chuyển đổi địa chỉ IPv4 thành các khối 4 bytes và kết hợp chúng thành một bytearray.
-- Xóa padding: Sử dụng byte cuối cùng để xác định và loại bỏ padding.
-- Giải mã: Đảo ngược hàm __cipher(k, d)__ sử dụng khóa __k__ để giải mã bytearray.
+- __Xóa padding__: Sử dụng byte cuối cùng để xác định và loại bỏ padding.
+- __Giải mã__: Đảo ngược hàm __cipher(k, d)__ sử dụng khóa __k__ để giải mã bytearray.
 
 Chạy file __decrypt.py__ để ra flag.
 #### END!!
