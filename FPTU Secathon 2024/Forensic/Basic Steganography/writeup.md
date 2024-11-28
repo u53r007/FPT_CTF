@@ -19,11 +19,11 @@ Phân tích bức hình fictory.jpg. Việc đầu tiên nên làm tất nhiên 
 ```
 $ exiftool fictory.jpg
 ```
-Trong metadata cũng không có gì cần chú ý cả ngoài việc biết chính xác đuôi file là .webp thay vì .jpg. Cuối cùng thử extract hex của bức hình.
+Trong metadata cũng không có gì cần chú ý cả. Cuối cùng thử extract hex của bức hình.
 ```
 $ xxd fictory.jpg
 ```
-![image](https://github.com/u53r007/2024/assets/165979681/31c07384-3f37-491d-aaa9-e676663bf635)
+![image](https://github.com/user-attachments/assets/78e5e241-b12c-4842-917d-f6b67628b43d)
 
 Và nó ra luôn :)) Ảo thật đấy!!
 
