@@ -42,9 +42,13 @@ $ cyclic -l daaaaaaa
 ![image](https://github.com/user-attachments/assets/9b348aba-4c87-48cd-bb7f-af709bbcb8df)
 
 Vậy là đã tìm được offset của hacked() là 24. Giờ dùng payload để chuyển hướng RIP sang hàm hacked() (payload có thể tự craft hoặc dùng của pwntools local_run.py).
-![image](https://github.com/uS3rR00t05/2024/assets/165979681/9e735278-21b3-4c58-add0-3c7f4fabd0f5)
+
+![image](https://github.com/user-attachments/assets/0413d765-fe1a-4768-8f10-5efadd79c4e3)
+
 Tada thành công!! Nếu đọc kĩ source code thì sẽ thấy là hàm hacked() đã được trả về đúng kết quả nhưng flag chưa có vì code đang chạy trên local nên làm gì có file flag mà đọc :))). Thêm bước thử nữa tạo 1 file flag.txt điền đại vô đó coi nó có chạy không.
-![image](https://github.com/uS3rR00t05/2024/assets/165979681/6d385b28-ae73-48cb-9bce-cf26c084edbc)
+
+![image](https://github.com/user-attachments/assets/59d46f38-e82c-4312-bc22-5567fbdc0dce)
+
 Tuyệt!! xong bước thử trên local giờ deploy lên trên server.
 
 - __Giai đoạn deploy__
@@ -57,7 +61,7 @@ Nên phải tạo một script khác để capture dòng response đầu tiên c
 Vào pwndbg:
 >disassemble hacked để có thể check address của hàm hacked().
 
-![image](https://github.com/uS3rR00t05/2024/assets/165979681/4314a9ad-45b8-4bf9-97d8-9490d164f666)
+![image](https://github.com/user-attachments/assets/0e2b4ef8-3812-4efb-8488-acb6dbc54321)
 
 xong sau đó chạy file script exploit.py sẽ ra được flag.
 >[!NOTE]
