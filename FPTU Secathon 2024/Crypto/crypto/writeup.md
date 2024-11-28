@@ -15,7 +15,7 @@
 ### FLAG
 >FUSec{howdyiamnowinyourhanddecrypted}
 ### SOLVED
-Tiếp cận với đề bài là một đoạn IPv4 và đoạn code mã hóa encrypt.py nó. Phân tích đoạn code có thể chú ý một vài hàm sau:
+Tiếp cận với đề bài là một đoạn IPv4 và đoạn code mã hóa __encrypt.py__. Phân tích đoạn code có thể chú ý một vài hàm sau:
 - __cipher(k, d)__: Mã hóa dữ liệu __d__ bằng khóa __k__ với thuật toán giống RC4, xuất ra một bytearray.
 - __encr(pt, k)__: Mã hóa plaintext __pt__ bằng khóa __k__, thêm padding và chuyển đổi kết quả thành danh sách các địa chỉ IPv4.
 - __d2ip(d)__: Chuyển đổi dữ liệu được mã hóa __d__ thành danh sách các địa chỉ IPv4, coi mỗi chunk 4 bytes là một số 32 bit.
