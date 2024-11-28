@@ -12,10 +12,10 @@ def start(argv=[], *a, **kw):
 
 
 # Specify your GDB script here for debugging
-gdbscript = ""
+gdbscript = """
 init-pwndbg
 continue
-"".format(**locals())
+""".format(**locals())
 
 
 # Set up pwntools for the correct architecture
