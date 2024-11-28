@@ -19,7 +19,7 @@
 
 Server không thực hiện validation và code bị lỗi format string. Tiếp theo nhập vào vài kí tự __%p__ để xem giá trị tại địa chỉ con trỏ đó (giá trị sẽ được hiển thị dưới dạng hex).
 
-Paste cái dòng đó qua __cyberchef__ hoặc sử dụng __hex__ để giải mã chuỗi hex đó và chuỗi chuỗi từ __little endian__ sang __big endian__ và xóa bớt mấy dòng thừa. Sau đó tách chuỗi hex ra 4 bytes và thực hiện ghép lại đúng thứ tự sẽ ra flag.
+Paste cái dòng đó qua __cyberchef__ hoặc sử dụng __hex__ để giải mã chuỗi hex đó và chuyển chuỗi từ __little endian__ sang __big endian__ và xóa bớt mấy dòng thừa. Sau đó tách chuỗi hex ra 4 bytes và thực hiện ghép lại đúng thứ tự sẽ ra flag.
 
 >Source tham khảo: [Endianess](https://www.youtube.com/watch?v=LxvFb63OOs8&t=7s) 
 
