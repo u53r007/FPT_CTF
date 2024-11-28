@@ -23,7 +23,7 @@
 ### SOLVED
 Tiếp cận đề bài mở file RE_Challenge3 bằng tool RE thì chỉ thấy xuất hiện các hàm sub => file này đang bị pack. Sử dụng các công cụ phát hiện pack để xem file bị pack như thế nào. Sử dụng DIE thì ta thấy nó sử dụng UPX-packed.
 
-![image](https://github.com/user-attachments/assets/1d3104b9-28d7-41e8-a332-ccb218493345)
+![image](https://github.com/user-attachments/assets/cddf747d-d5b5-4b88-9f2b-1aa7b00ea90f)
 
 Ta thực hiện unpack cái UPX đó:
 ```
@@ -37,13 +37,12 @@ __Hàm main__:
 - Nếu kiểm tra không thành công, nó sẽ in thông báo lỗi và thoát với giá trị trả về là 1.
 - Nếu kiểm tra thành công, nó gọi một hàm có tên __decrypt_flag__.
 
-![image](https://github.com/user-attachments/assets/33cbdb95-d283-4774-a0df-9919da91b7c4)
-
+![image](https://github.com/user-attachments/assets/fdaee623-53c3-4c4d-a7f4-5072a64493e9)
 
 Ta tiếp tục đến với hàm __decrypt_flag__:
 - Nó kiểm tra đối số thứ ba phải là: __"secretflagkey"__ nếu đúng thì nó sẽ in ra flag, nếu không thì nó sẽ thoát chương trình.
 
-![image](https://github.com/user-attachments/assets/16d2faca-f5ed-4825-ab90-9798918e54a5)
+![image](https://github.com/user-attachments/assets/2595c8d2-5869-4b54-8d37-8ee5e138a9d4)
 
 Vậy thông qua 2 hàm ta vừa phân tích ta có thể hiểu sơ là chương trình cần chạy với 2 đối số là: __get_flag__ và __secretflagkey__. Từ đó ta chạy chương trình là ra flag:
 ```
