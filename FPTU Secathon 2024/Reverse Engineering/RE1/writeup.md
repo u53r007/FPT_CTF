@@ -34,17 +34,17 @@ Hàm __main__:
     - Nếu định dạng chính xác, hàm sẽ trích xuất 38 ký tự ở giữa từ đầu vào và gọi hàm __check_license_key__.
     - Hàm __check_license_key__ so sánh 38 ký tự này với các giá trị có nguồn gốc từ v7 và v8.
 
-![image](https://github.com/user-attachments/assets/6b7f7517-7bb0-428c-b045-a7844d94b3e6)
+![image](https://github.com/user-attachments/assets/17367f9e-145e-4123-bfe8-dfc0cf0acfe3)
 
 Hàm __check__license_key__:
   - Chức năng lặp qua từng ký tự trong số 38 ký tự trong license key đã nhập. Đối với mỗi ký tự, nó so sánh nó với kết quả của công thức: v7 [i] - v8 [i]. Nếu ký tự không khớp với giá trị mong đợi, hàm trả về 0 (không hợp lệ) và 1 nếu hợp lệ.
 
-![image](https://github.com/user-attachments/assets/30768489-f8dd-4df4-a54e-8c38d2bd286d)
+![image](https://github.com/user-attachments/assets/879bd31b-ba33-40a5-99c8-4f67009bae34)
 
 Qua phân tích ta thấy rằng các giá trị số nguyên của v7 và v8 được ghi cứng vào trong hàm __main__ nên ta chỉ cần viết một script để tách các giá trị đó ra thành 2 mảng v7,v8 và join v7,v8 theo dạng: 
 > __FuSec{<join(v7,v8)>}__
 
-![image](https://github.com/user-attachments/assets/6a0c45c1-6b73-4371-9fe4-e09029fd4047)
+![image](https://github.com/user-attachments/assets/1e8f239b-b52f-49ca-aac9-5a0a23fb1bfb)
 
 Viết script __Join.py__ và chạy là ra flag.
 #### END!!
