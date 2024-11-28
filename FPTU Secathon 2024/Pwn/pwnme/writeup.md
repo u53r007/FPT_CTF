@@ -19,6 +19,9 @@
 
 ### SOLVED
 Tiếp cận đề bài là 2 files: pwn_1 và file code C pwn_1.c. Đọc sơ qua file code C có thể thấy đây là dạng bài buffer overflow làm tràn Instruction Pointer (IP) để trả về kết quả hàm mong muốn (Ret2win). Trong code thì hàm hacked() cũng không có tham số nên chỉ đơn giản là trả về hàm đó để mở flag.
+
+![image](https://github.com/user-attachments/assets/4b119c4e-3ffd-46a7-8a80-9b3a28a550b8)
+
 - __Giai đoạn thử__
 
 Trước tiên tìm offset của hàm hacked(). Có nhiều cách để làm điều đó craft payload (ropstar.py), xài cyclic pwndbg hoặc metasploit, disassemble xong tự tính :))) Ở đây mình xài pwndbg để tìm offset:
@@ -29,15 +32,14 @@ $ cyclic 100
 
  run xong điền cyclic vào
 
-![image](https://github.com/uS3rR00t05/2024/assets/165979681/49e9e9f0-58b7-4ab0-9a02-6c705b602b63)
+![image](https://github.com/user-attachments/assets/635d454a-4c03-4987-b4c9-f64408781044)
 
-Điều đặc biệt đó chính là do đây là file 64-bit nên sẽ không làm overflow được RIP như EIP trong 32-bit, vậy lấy đỡ offset của thằng ngay trên nó là RSP lấy 8 bytes đầu.
+Do đây là file 64-bit nên sẽ không làm overflow được RIP như EIP trong 32-bit, vậy lấy đỡ offset của thằng ngay trên nó là RSP lấy 8 bytes đầu.
 
-![image](https://github.com/uS3rR00t05/2024/assets/165979681/96256532-0b76-4fdd-8526-21e070548288)
 ```
 $ cyclic -l daaaaaaa
 ```
-![image](https://github.com/uS3rR00t05/2024/assets/165979681/b37e9441-38df-4fdb-9530-b3c88c586a03)
+![image](https://github.com/user-attachments/assets/9b348aba-4c87-48cd-bb7f-af709bbcb8df)
 
 Vậy là đã tìm được offset của hacked() là 24. Giờ dùng payload để chuyển hướng RIP sang hàm hacked() (payload có thể tự craft hoặc dùng của pwntools local_run.py).
 ![image](https://github.com/uS3rR00t05/2024/assets/165979681/9e735278-21b3-4c58-add0-3c7f4fabd0f5)
