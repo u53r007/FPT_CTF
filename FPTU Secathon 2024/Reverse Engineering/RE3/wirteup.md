@@ -1,4 +1,3 @@
-
 ### TITLE
 >RE3
 ### DESCRIPTION
@@ -30,6 +29,7 @@ Ta thực hiện unpack cái UPX đó:
 upx -d RE_Challenge3
 ```
 Sau khi unpack, tìm đến hàm __main__ ta phân tích bằng psudocode có thể hiểu sơ như sau:
+
 __Hàm main__:
 - Kiểm tra đối số:
   - Nó kiểm tra xem số lượng đối số (argc) có chính xác là 3 hay không.
